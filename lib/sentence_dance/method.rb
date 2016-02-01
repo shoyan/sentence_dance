@@ -5,8 +5,8 @@ module SentenceDance
     end
 
     def question
-      dict = dictionary.list.sample
-      SentenceDance::Question.new dict[0], dict[1]
+      sentence, translated = dictionary.list.sample
+      SentenceDance::Question.new sentence, translated
     end
   end
 end

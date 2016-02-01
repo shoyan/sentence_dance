@@ -1,8 +1,5 @@
 # SentenceDance
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sentence_dance`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+SentenceDance is a tool to train your grammar sense.
 
 ## Installation
 
@@ -22,7 +19,47 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+question = SentenceDance.question
+
+# SentenceDance :: Question is a class that extends the array, sentence to 1st column, translated to 2nd column is stored.
+=> ["Do as you like, do what feels right.", "好きなように振る舞いなさい。そして正しいと思えることを行いなさい。"]
+
+quetion.sentence
+=> "Do as you like, do what feels right."
+
+question.sentence.dance
+
+# dance method will shuffle the sentence.
+=> "feels do what right. like, as Do you"
+
+question.translate
+=> "好きなように振る舞いなさい。そして正しいと思えることを行いなさい。"
+
+question.check_answer 'Do as you like, do what feels right.'
+=> true
+
+question.check_answer 'Do you like, what as feels right.' 
+=> false
+
+```
+
+### Dictionary
+Dictionary you can add freely.
+Dictionary directory is `lib/sentence_dance/dictionaries/`.
+
+__format__
+Dictionary format is YAML.
+
+```
+---
+- - Do as you like, do what feels right.
+  - 好きなように振る舞いなさい。そして正しいと思えることを行いなさい。
+- - I have a question for you.
+  - 質問があります。
+- - Can everybody be quiet?
+  - 静かにしなさい。
+```
 
 ## Development
 

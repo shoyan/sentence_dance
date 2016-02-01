@@ -22,19 +22,18 @@ Or install it yourself as:
 ```ruby
 question = SentenceDance.question
 
-# SentenceDance :: Question is a class that extends the array, sentence to 1st column, translated to 2nd column is stored.
+# SentenceDance::Question is a class that extends the array, sentence to 1st column, translated to 2nd column is stored.
 => ["Do as you like, do what feels right.", "好きなように振る舞いなさい。そして正しいと思えることを行いなさい。"]
 
 quetion.sentence
 => "Do as you like, do what feels right."
 
-question.sentence.dance
-
-# dance method will shuffle the sentence.
-=> "feels do what right. like, as Do you"
-
 question.translate
 => "好きなように振る舞いなさい。そして正しいと思えることを行いなさい。"
+
+question.sentence.dance
+# dance method will shuffle the sentence.
+=> "feels do what right. like, as Do you"
 
 question.check_answer 'Do as you like, do what feels right.'
 => true
@@ -45,10 +44,10 @@ question.check_answer 'Do you like, what as feels right.'
 ```
 
 ### Dictionary
-Dictionary you can add freely.
+Dictionary you can add freely.  
 Dictionary directory is `lib/sentence_dance/dictionaries/`.
 
-__format__
+__format__  
 Dictionary format is YAML.
 
 ```
